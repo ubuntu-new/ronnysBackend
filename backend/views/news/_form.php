@@ -80,6 +80,9 @@ $img->getPath();
         ]
     ]);?>
 
+
+    <?= $form->field($model, 'feautured')->radioList( [0=>'No', 1 => 'Yes'], ['unselect' => null] ); ?>
+
     <?= $form->field($model, 'status')->dropDownList([ 0 => '0', 1 => '1', 13 => '13', ], ['prompt' => '']) ?>
 
 

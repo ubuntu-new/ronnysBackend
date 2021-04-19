@@ -84,7 +84,7 @@ class Goods extends \yii\db\ActiveRecord
             //'offerPrice' => 'Offer Price',
             //'latest' => 'Latest',
             //'bestSellers' => 'Best Sellers',
-            'trending' => 'Feautured',
+//            'trending' => 'Feautured',
             'visible' => 'Visible',
             'image' => 'Img',
             //'imgHover' => 'Img Hover',

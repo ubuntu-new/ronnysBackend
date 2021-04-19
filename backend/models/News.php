@@ -17,6 +17,7 @@ use Yii;
  * @property string $description_ge
  * @property string $metakeyword
  * @property string $metakeyword_ge
+ * @property string $feautured
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -49,7 +50,7 @@ class News extends \yii\db\ActiveRecord
         return [
             [['title', 'title_ge'], 'string', 'max' => 255],
             [['title','title_ge', 'description_ge', 'metakeyword', 'metakeyword_ge'], 'required'],
-            [['created','status', 'description', 'description_ge', 'user_id'], 'safe'],
+            [['created','status', 'description', 'description_ge', 'user_id','feautured'], 'safe'],
             [['image'], 'file', 'extensions' => 'png, jpg'],
         ];
     }
@@ -70,6 +71,7 @@ class News extends \yii\db\ActiveRecord
             'description_ge' => 'Description Ge',
             'metakeyword' => 'Metakeyword',
             'metakeyword_ge' => 'Metakeyword Ge',
+            'feautured' => 'Feautured',
             'image' => 'Image',
         ];
     }

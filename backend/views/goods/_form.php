@@ -87,8 +87,6 @@ $img->getPath();
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'trending')->radioList( [0=>'No', 1 => 'Yes'], ['unselect' => null] ); ?>
-
     <?= $form->field($model, 'visible')->dropDownList([ 0 => '0', 1 => '1', 13 => '13', ], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'dateTime')->textInput() ?>
