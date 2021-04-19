@@ -6258,3 +6258,73 @@ Stack trace:
 ]
 
 $_POST = []
+2021-04-17 15:53:35 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/products/featured in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('featured', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/products/fea...', Array)
+#2 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-17 15:53:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/products/featured'
+]
+
+$_POST = []
+2021-04-17 15:54:06 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/featured/list". in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/featured/lis...', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-17 15:54:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/featured/list'
+]
+
+$_POST = []
+2021-04-19 17:58:27 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/featured/list". in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/featured/lis...', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-19 17:58:26 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/featured/list'
+]
+
+$_POST = []
+2021-04-19 18:04:32 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: v1/news/feautured in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Controller.php:152
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('feautured', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/news/feautur...', Array)
+#2 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-19 18:04:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/news/feautured'
+]
+
+$_POST = []
