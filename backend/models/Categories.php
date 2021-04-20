@@ -30,9 +30,9 @@ class Categories extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name_ge', 'mine', 'comm'], 'required'],
-            [['mine'], 'integer'],
-            [['visible', 'comm'], 'string'],
+            [['name', 'name_ge'], 'required'],
+            [['mine', 'comm'], 'safe'],
+            [['visible'], 'string'],
             [['name'], 'string', 'max' => 80],
             [['name_ge'], 'string', 'max' => 255],
         ];

@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
+use mihaildev\elfinder;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\About */
@@ -14,21 +16,37 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'status')->dropDownList([ 0 => '0', 1 => '1', 13 => '13', ], ['prompt' => '']) ?>
-
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'created')->textInput() ?>
+    <?= $form->field($model, 'title_ge')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'quote')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'quote_ge')->textInput(['maxlength' => true]) ?>
+
+
+    <?= $form->field($model, 'description')->widget(CKEditor::className(), [
+        'options' => ['rows' => 8],
+        'clientOptions' =>  elfinder\ElFinder::ckeditorOptions('elfinder',
+            [
+                'language'=>'en', 'title'=>'Paragraph'
+            ]
+        ),
+    ]);?>
+
+
+    <?= $form->field($model, 'description_ge')->widget(CKEditor::className(), [
+        'options' => ['rows' => 8],
+        'clientOptions' =>  elfinder\ElFinder::ckeditorOptions('elfinder',
+            [
+                'language'=>'en', 'title'=>'Paragraph'
+            ]
+        ),
+    ]);?>
+
     <?= $form->field($model, 'keywords')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'title_ge')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'description_ge')->textarea(['rows' => 6]) ?>
-
     <?= $form->field($model, 'metakeyword_ge')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'status')->dropDownList([ 0 => '0', 1 => '1', 13 => '13', ], ['prompt' => '']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

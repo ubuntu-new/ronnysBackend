@@ -49,7 +49,7 @@ class Locations extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
-            'status' => 'Status',
+            'status' => 'Visible',
             'description' => 'Description',
             'number' => 'Number',
             'quote' => 'Quote',

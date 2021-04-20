@@ -16,11 +16,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name_ge')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'mine')->textInput() ?>
-
     <?= $form->field($model, 'visible')->dropDownList([ '0', '1', ], ['prompt' => '']) ?>
 
-    <?= $form->field($model, 'comm')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

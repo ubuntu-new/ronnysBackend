@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use dosamigos\ckeditor\CKEditor;
+use mihaildev\elfinder;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Faq */
@@ -16,9 +18,24 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title_ge')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'description')->widget(CKEditor::className(), [
+        'options' => ['rows' => 8],
+        'clientOptions' =>  elfinder\ElFinder::ckeditorOptions('elfinder',
+            [
+                'language'=>'en', 'title'=>'Paragraph'
+            ]
+        ),
+    ]);?>
 
-    <?= $form->field($model, 'description_ge')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'description_ge')->widget(CKEditor::className(), [
+        'options' => ['rows' => 8],
+        'clientOptions' =>  elfinder\ElFinder::ckeditorOptions('elfinder',
+            [
+                'language'=>'en', 'title'=>'Paragraph'
+            ]
+        ),
+    ]);?>
 
     <?= $form->field($model, 'metakeyword')->textarea(['rows' => 6]) ?>
 

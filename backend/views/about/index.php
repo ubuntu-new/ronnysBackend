@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create About', ['create'], ['class' => 'btn btn-success']) ?>
+<!--        --><?//= Html::a('Create About', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -26,7 +26,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'title',
             'status',
@@ -38,7 +37,12 @@ $this->params['breadcrumbs'][] = $this->title;
             //'description_ge:ntext',
             //'metakeyword_ge:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header'=>'Action',
+                'headerOptions' => ['width' => '80'],
+                'template' => '{view} {update} {link}',
+            ],
         ],
     ]); ?>
 

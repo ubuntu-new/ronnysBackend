@@ -13,6 +13,7 @@ use Yii;
  * @property string $description
  * @property string $created
  * @property string $quote
+ * @property string $quote_ge
  * @property string $keywords
  * @property string $title_ge
  * @property string $description_ge
@@ -35,9 +36,9 @@ class About extends \yii\db\ActiveRecord
     {
         return [
             [['status', 'description', 'keywords', 'description_ge', 'metakeyword_ge'], 'string'],
-            [['description', 'quote', 'keywords', 'title_ge', 'description_ge', 'metakeyword_ge'], 'required'],
+            [['description', 'quote', 'quote_ge', 'keywords', 'title_ge', 'description_ge', 'metakeyword_ge'], 'required'],
             [['created'], 'safe'],
-            [['title', 'quote', 'title_ge'], 'string', 'max' => 255],
+            [['title', 'quote', 'quote_ge', 'title_ge'], 'string', 'max' => 255],
         ];
     }
 
@@ -49,10 +50,11 @@ class About extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
-            'status' => 'Status',
+            'status' => 'Visible',
             'description' => 'Description',
             'created' => 'Created',
             'quote' => 'Quote',
+            'quote_ge' => 'Quote Ge',
             'keywords' => 'Keywords',
             'title_ge' => 'Title Ge',
             'description_ge' => 'Description Ge',
