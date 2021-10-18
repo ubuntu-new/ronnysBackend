@@ -6328,3 +6328,60 @@ Stack trace:
 ]
 
 $_POST = []
+2021-04-22 21:16:42 [::1][1][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The table does not exist: orders in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\db\ActiveRecord.php:438
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\db\ActiveRecord.php(469): yii\db\ActiveRecord::getTableSchema()
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(500): yii\db\ActiveRecord->attributes()
+#2 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\db\BaseActiveRecord.php(315): yii\db\BaseActiveRecord->hasAttribute('customer_id')
+#3 C:\xampp\htdocs\webertela-new\api\actions\OrdersAction.php(14): yii\db\BaseActiveRecord->__set('customer_id', '2')
+#4 C:\xampp\htdocs\webertela-new\rest\modules\v1\controllers\OrdersController.php(26): api\actions\OrdersAction::create('2', '{name: 'iko'}')
+#5 [internal function]: rest\modules\v1\controllers\OrdersController->actionCreate()
+#6 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Controller.php(181): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php(534): yii\base\Controller->runAction('create', Array)
+#9 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/orders/creat...', Array)
+#10 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2021-04-22 21:16:42 [::1][1][-][info][application] $_GET = [
+    'r' => 'v1/orders/create'
+]
+
+$_POST = [
+    'customer_id' => '2'
+    'orderData' => '{name: \'iko\'}'
+]
+2021-04-22 21:22:04 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/featured/list". in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/featured/lis...', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-22 21:22:04 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/featured/list'
+]
+
+$_POST = []
+2021-04-22 21:22:37 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/featured/list". in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Module.php:543
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php(104): yii\base\Module->runAction('v1/featured/lis...', Array)
+#1 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\web\Application.php:116
+Stack trace:
+#0 C:\xampp\htdocs\webertela-new\vendor\yiisoft\yii2\base\Application.php(392): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\webertela-new\rest\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2021-04-22 21:22:37 [::1][-][-][info][application] $_GET = [
+    'r' => 'v1/featured/list'
+]
+
+$_POST = []

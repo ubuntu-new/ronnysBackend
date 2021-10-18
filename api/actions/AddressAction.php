@@ -2,14 +2,14 @@
 namespace api\actions;
 
 
-use api\models\response\AboutResponse;
-use backend\models\About;
+use api\models\response\AddressResponse;
+use backend\models\Address;
 use yii\base\Exception;
 use yii\helpers\Json;
 
-class AboutAction {
+class AddressAction {
     public static function getList(){
-           return About::find()
+           return Address::find()
                ->where(['status' => '1'])
                ->all();
 

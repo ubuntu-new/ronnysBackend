@@ -7,6 +7,13 @@ use rest\models\response\Response;
 
 class OrdersController extends RestController  {
 
+
+
+    public function actionList(){
+        //$rcxa = \Yii::$app->request->post('name');
+        return OrdersAction::getList();
+    }
+
     public function actionCreate() {
         $orderData = \Yii::$app->request->post("orderData");
         $customer_id = \Yii::$app->request->post("customer_id");

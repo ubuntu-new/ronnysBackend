@@ -36,8 +36,12 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
+
+        ['label' => 'Slider', 'url' => ['/slider/index']],
+        ['label' => 'Orders', 'url' => ['/orders/index']],
         ['label' => 'About', 'url' => ['/about/index']],
-//        ['label' => 'User', 'url' => ['/user/index']],
+        ['label' => 'User', 'url' => ['/user/index']],
+        ['label' => 'Address', 'url' => ['/address/index']],
         ['label' => 'Pruducts', 'url' => ['/goods/index']],
         ['label' => 'Categories', 'url' => ['/categories/index']],
         ['label' => 'News', 'url' => ['/news/index']],

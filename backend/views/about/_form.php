@@ -41,7 +41,7 @@ use mihaildev\elfinder;
             ]
         ),
     ]);?>
-
+    
     <?= $form->field($model, 'keywords')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'metakeyword_ge')->textarea(['rows' => 6]) ?>

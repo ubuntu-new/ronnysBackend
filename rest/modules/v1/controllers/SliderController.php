@@ -1,7 +1,7 @@
 <?php
 namespace rest\modules\v1\controllers;
 
-use api\actions\ProductAction;
+use api\actions\SliderAction;
 use api\actions\UserAction;
 use api\models\database\IngredientsPrice;
 use api\models\response\Result;
@@ -9,17 +9,14 @@ use rest\controllers\RestController;
 use yii\base\Security;
 use rest\models\response\Response;
 
-class ProductsController extends RestController  {
+class SliderController extends RestController  {
 
 
     public  function actionList(){
         //$rcxa = \Yii::$app->request->post('name');
-        return ProductAction::getList();
+        return SliderAction::getList();
     }
-    public  function actionCatlist(){
-        //$rcxa = \Yii::$app->request->post('name');
-        return ProductAction::getCatlist();
-    }
+
 
 
 

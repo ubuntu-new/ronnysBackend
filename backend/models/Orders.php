@@ -1,6 +1,7 @@
 <?php
 
-namespace backend\models;
+namespace app\models;
+
 use Yii;
 
 /**
@@ -30,10 +31,10 @@ class Orders extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['customer_id', 'orderData'], 'required'],
+            [['customer_id', 'orderData', 'created_at'], 'required'],
             [['customer_id'], 'integer'],
             [['orderData', 'statuss', 'visible'], 'string'],
-            [['created_at', 'updated_at','id'], 'safe'],
+            [['created_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -43,13 +44,13 @@ class Orders extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'customer_id' => 'Customer ID',
-            'orderData' => 'Order Data',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'statuss' => 'Statuss',
-            'visible' => 'Visible',
+            'id' => Yii::t('app', 'ID'),
+            'customer_id' => Yii::t('app', 'Customer ID'),
+            'orderData' => Yii::t('app', 'Order Data'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
+            'statuss' => Yii::t('app', 'Statuss'),
+            'visible' => Yii::t('app', 'Visible'),
         ];
     }
 }

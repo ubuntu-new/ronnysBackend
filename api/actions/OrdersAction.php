@@ -4,7 +4,20 @@ namespace api\actions;
 use api\models\response\Result;
 use backend\models\Orders;
 
+use api\models\response\OrdersResponse;
+
+use yii\base\Exception;
+use yii\helpers\Json;
+
 class OrdersAction {
+
+    public static function getList(){
+        return Orders::find()
+            ->where(['visible' => '1'])
+            ->all();
+    }
+
+
     public static function create($customer_id , $orderData){
 
         $transaction = \Yii::$app->db->beginTransaction();

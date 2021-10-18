@@ -29,6 +29,9 @@ $this->title = 'August backery admin pannel';
                     <li class="nav-item">
                         <?= Html::a('Locations', ['locations/index']) ?>
                     </li>
+                    <li class="nav-item">
+                        <?= Html::a('Slider', ['slider/index']) ?>
+                    </li>
 <!--                    <li class="nav-item">-->
 <!--                        --><?//= Html::a('Contact', ['Contact/index']) ?>
 <!--                    </li>-->
